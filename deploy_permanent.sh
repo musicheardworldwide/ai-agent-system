@@ -15,7 +15,7 @@ if [ ! -f .env ]; then
     cat > .env << EOL
 # AI Agent System Environment Variables
 API_BASE_URL=https://api.lastwinnersllc.com
-LLM_MODEL=llama3.2
+LLM_MODEL=llama3.2:3b-instruct-q4_0
 EMBEDDING_MODEL=nomic-embed-text
 DATABASE_URI=sqlite:///data/ai_agent.db
 DEBUG=False

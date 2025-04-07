@@ -30,7 +30,7 @@ if [ ! -f .env ]; then
 # AI Agent System Environment Variables
 API_BASE_URL=https://api.lastwinnersllc.com
 API_KEY=
-CHAT_MODEL=llama3.2
+CHAT_MODEL=llama3.2:3b-instruct-q4_0
 EMBEDDING_MODEL=nomic-embed-text
 DATABASE_URI=sqlite:///data/ai_agent.db
 PORT=8080

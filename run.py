@@ -23,7 +23,7 @@ def create_app():
         SQLALCHEMY_DATABASE_URI=os.environ.get('DATABASE_URI', 'sqlite:///data/ai_agent.db'),  # Provide default value
         API_BASE_URL=os.environ.get('API_BASE_URL', 'https://api.lastwinnersllc.com'),
         API_KEY=os.environ.get('API_KEY', ''),
-        LLM_MODEL=os.environ.get('LLM_MODEL', 'llama3.2'),
+        LLM_MODEL=os.environ.get('LLM_MODEL', 'llama3.2:3b-instruct-q4_0'),
         EMBEDDING_MODEL=os.environ.get('EMBEDDING_MODEL', 'nomic-embed-text'),
         PROJECT_ROOT=os.path.abspath(os.path.dirname(__file__))
     )

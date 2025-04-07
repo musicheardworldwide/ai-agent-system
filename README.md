@@ -2,7 +2,7 @@
 
 ## Overview
 
-The AI Agent System is a comprehensive open-interpreter system with smart memory capabilities, built around the core principles of extensibility, intelligence, and self-improvement. The system leverages the power of large language models (specifically llama3.2) and embeddings (nomic-embed-text) to provide a versatile AI assistant that can understand, learn from, and adapt to user interactions.
+The AI Agent System is a comprehensive open-interpreter system with smart memory capabilities, built around the core principles of extensibility, intelligence, and self-improvement. The system leverages the power of large language models (specifically llama3.2:3b-instruct-q4_0) and embeddings (nomic-embed-text) to provide a versatile AI assistant that can understand, learn from, and adapt to user interactions.
 
 ## System Architecture
 
@@ -158,7 +158,7 @@ The system is configured using environment variables, which can be set in a `.en
 # API Configuration
 API_BASE_URL=https://api.lastwinnersllc.com
 API_KEY=your_api_key_here
-LLM_MODEL=llama3.2
+LLM_MODEL=llama3.2:3b-instruct-q4_0
 EMBEDDING_MODEL=nomic-embed-text
 
 # Database Configuration

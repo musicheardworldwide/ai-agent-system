@@ -7,7 +7,7 @@ The AI Agent System is a comprehensive open-interpreter system with smart memory
 
 ### 1. Open-Interpreter System
 - Core chat functionality through the `/chat` endpoint
-- Integration with the llama3.2 model via api.lastwinnersllc.com
+- Integration with the llama3.2:3b-instruct-q4_0 model via api.lastwinnersllc.com
 - Ability to understand and execute custom tools
 
 ### 2. Smart Memory System

@@ -42,7 +42,7 @@ COPY app.py .
 # Create .env file with default values
 RUN echo "API_BASE_URL=https://api.lastwinnersllc.com\n\
 API_KEY=test_key\n\
-CHAT_MODEL=llama3.2\n\
+CHAT_MODEL=llama3.2:3b-instruct-q4_0\n\
 EMBEDDING_MODEL=nomic-embed-text\n\
 DATABASE_URI=sqlite:///data/ai_agent.db\n\
 PORT=8080\n\
