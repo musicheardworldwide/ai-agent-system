@@ -275,16 +275,12 @@ class DevChatInterpreter:
     def _initialize_embedding_function(self):
         """Initialize the embedding function"""
         try:
-            # Use the nomic-embed-text model
-            return embedding_functions.RemoteEmbeddingFunction(
-                api_url=f"{self.api_base_url}/embeddings",
-                api_key=self.api_key,
-                model_name="nomic-embed-text"
-            )
+            # Use the default embedding function provided by ChromaDB
+            return embedding_functions.DefaultEmbeddingFunction()
         except Exception as e:
             print(f"Error initializing embedding function: {e}")
-            # Fall back to default embedding function
-            return embedding_functions.DefaultEmbeddingFunction()
+            # Return None or handle the error as needed
+            return None
     
     def scan_project(self):
         """Scan the entire project and build the code graph"""
