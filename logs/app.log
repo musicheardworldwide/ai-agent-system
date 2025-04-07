@@ -1,0 +1,119 @@
+Traceback (most recent call last):
+  File "/root/ai-agent-system/app.py", line 7, in <module>
+    from backend.app import create_app
+  File "/root/ai-agent-system/backend/app/__init__.py", line 8, in <module>
+    from backend.app.models import init_db
+  File "/root/ai-agent-system/backend/app/models.py", line 11, in <module>
+    class Conversation(Base):
+  File "/root/ai-agent-system/venv/lib/python3.12/site-packages/sqlalchemy/orm/decl_api.py", line 199, in __init__
+    _as_declarative(reg, cls, dict_)
+  File "/root/ai-agent-system/venv/lib/python3.12/site-packages/sqlalchemy/orm/decl_base.py", line 248, in _as_declarative
+    return _MapperConfig.setup_mapping(registry, cls, dict_, None, {})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/ai-agent-system/venv/lib/python3.12/site-packages/sqlalchemy/orm/decl_base.py", line 329, in setup_mapping
+    return _ClassScanMapperConfig(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/ai-agent-system/venv/lib/python3.12/site-packages/sqlalchemy/orm/decl_base.py", line 575, in __init__
+    self._extract_mappable_attributes()
+  File "/root/ai-agent-system/venv/lib/python3.12/site-packages/sqlalchemy/orm/decl_base.py", line 1516, in _extract_mappable_attributes
+    raise exc.InvalidRequestError(
+sqlalchemy.exc.InvalidRequestError: Attribute name 'metadata' is reserved when using the Declarative API.
+2025-04-07 15:10:56,431 - __main__ - INFO - Starting AI Agent System on port 5000
+2025-04-07 15:10:56,431 - __main__ - INFO - Debug mode: True
+2025-04-07 15:10:56,535 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://65.38.98.42:5000
+2025-04-07 15:10:56,536 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-07 15:10:56,541 - werkzeug - INFO -  * Restarting with watchdog (inotify)
+2025-04-07 15:10:56,913 - __main__ - INFO - Starting AI Agent System on port 5000
+2025-04-07 15:10:56,913 - __main__ - INFO - Debug mode: True
+2025-04-07 15:10:56,917 - werkzeug - WARNING -  * Debugger is active!
+2025-04-07 15:10:56,920 - werkzeug - INFO -  * Debugger PIN: 802-235-862
+2025-04-07 15:11:42,272 - werkzeug - INFO -  * Detected change in '/root/ai-agent-system/standalone_app.py', reloading
+2025-04-07 15:11:42,272 - werkzeug - INFO -  * Detected change in '/root/ai-agent-system/standalone_app.py', reloading
+2025-04-07 15:11:42,617 - werkzeug - INFO -  * Detected change in '/root/ai-agent-system/standalone_app.py', reloading
+2025-04-07 15:11:42,638 - __main__ - INFO - Starting AI Agent System on port 5000
+2025-04-07 15:11:42,638 - __main__ - INFO - Debug mode: True
+2025-04-07 15:11:43,193 - werkzeug - INFO -  * Restarting with watchdog (inotify)
+2025-04-07 15:11:43,566 - __main__ - INFO - Starting AI Agent System on port 5000
+2025-04-07 15:11:43,567 - __main__ - INFO - Debug mode: True
+2025-04-07 15:11:43,570 - werkzeug - WARNING -  * Debugger is active!
+2025-04-07 15:11:43,573 - werkzeug - INFO -  * Debugger PIN: 802-235-862
+2025-04-07 15:13:48,079 - werkzeug - INFO -  * Detected change in '/root/ai-agent-system/standalone_app.py', reloading
+2025-04-07 15:13:48,107 - werkzeug - INFO -  * Detected change in '/root/ai-agent-system/standalone_app.py', reloading
+2025-04-07 15:13:48,107 - werkzeug - INFO -  * Detected change in '/root/ai-agent-system/standalone_app.py', reloading
+2025-04-07 15:13:49,037 - werkzeug - INFO -  * Restarting with watchdog (inotify)
+2025-04-07 15:13:49,400 - __main__ - INFO - Starting AI Agent System on port 5000
+2025-04-07 15:13:49,400 - __main__ - INFO - Debug mode: True
+2025-04-07 15:13:49,404 - werkzeug - WARNING -  * Debugger is active!
+2025-04-07 15:13:49,406 - werkzeug - INFO -  * Debugger PIN: 802-235-862
+2025-04-07 15:16:25,856 - __main__ - INFO - Starting AI Agent System on port 8080
+2025-04-07 15:16:25,857 - __main__ - INFO - Debug mode: False
+2025-04-07 15:16:25,859 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://65.38.98.42:8080
+2025-04-07 15:16:25,859 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-07 15:20:33,177 - __main__ - INFO - Starting AI Agent System on port 8080
+2025-04-07 15:20:33,177 - __main__ - INFO - Debug mode: False
+2025-04-07 15:20:33,179 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://65.38.98.42:8080
+2025-04-07 15:20:33,179 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-07 15:22:06,132 - werkzeug - INFO - 127.0.0.1 - - [07/Apr/2025 15:22:06] "GET /api/health HTTP/1.1" 200 -
+2025-04-07 15:22:23,099 - __main__ - INFO - Received message: Hello, can you tell me about yourself?
+2025-04-07 15:22:23,106 - __main__ - ERROR - Error in chat endpoint: HTTPSConnectionPool(host='api.lastwinnersllc.com', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7e686280d430>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+2025-04-07 15:22:23,106 - werkzeug - INFO - 127.0.0.1 - - [07/Apr/2025 15:22:23] "[35m[1mPOST /api/chat HTTP/1.1[0m" 500 -
+2025-04-07 15:22:37,814 - werkzeug - INFO - 127.0.0.1 - - [07/Apr/2025 15:22:37] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-07 15:22:57,445 - werkzeug - INFO - 127.0.0.1 - - [07/Apr/2025 15:22:57] "GET /api/tools HTTP/1.1" 200 -
+2025-04-07 15:23:12,533 - werkzeug - INFO - 127.0.0.1 - - [07/Apr/2025 15:23:12] "GET /api/environment HTTP/1.1" 200 -
+2025-04-07 15:23:37,184 - werkzeug - INFO - 127.0.0.1 - - [07/Apr/2025 15:23:37] "POST /api/environment HTTP/1.1" 200 -
+2025-04-07 15:23:52,237 - werkzeug - INFO - 127.0.0.1 - - [07/Apr/2025 15:23:52] "POST /api/tools HTTP/1.1" 200 -
+2025-04-07 15:26:07,263 - werkzeug - INFO - 127.0.0.1 - - [07/Apr/2025 15:26:07] "GET / HTTP/1.1" 200 -
+2025-04-07 15:26:23,568 - werkzeug - INFO - 127.0.0.1 - - [07/Apr/2025 15:26:23] "GET / HTTP/1.1" 200 -
+2025-04-07 15:30:21,096 - werkzeug - INFO - 127.0.0.1 - - [07/Apr/2025 15:30:21] "GET / HTTP/1.1" 200 -
+2025-04-07 15:30:21,147 - werkzeug - INFO - 127.0.0.1 - - [07/Apr/2025 15:30:21] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-07 15:32:25,344 - werkzeug - INFO - 127.0.0.1 - - [07/Apr/2025 15:32:25] "[31m[1mPOST /api/chat HTTP/1.1[0m" 400 -
+2025-04-07 15:32:25,345 - __main__ - INFO - Received message: '; DROP TABLE users; --
+2025-04-07 15:32:25,351 - __main__ - ERROR - Error in chat endpoint: HTTPSConnectionPool(host='api.lastwinnersllc.com', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7e6862561880>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+2025-04-07 15:32:25,352 - werkzeug - INFO - 127.0.0.1 - - [07/Apr/2025 15:32:25] "[35m[1mPOST /api/chat HTTP/1.1[0m" 500 -
+2025-04-07 15:32:25,354 - werkzeug - INFO - 127.0.0.1 - - [07/Apr/2025 15:32:25] "GET /api/environment HTTP/1.1" 200 -
+2025-04-07 15:32:25,358 - werkzeug - INFO - 127.0.0.1 - - [07/Apr/2025 15:32:25] "POST /api/tools HTTP/1.1" 200 -
+2025-04-07 15:32:26,094 - werkzeug - INFO - 127.0.0.1 - - [07/Apr/2025 15:32:26] "GET / HTTP/1.1" 200 -
+2025-04-07 15:32:26,137 - werkzeug - INFO - 127.0.0.1 - - [07/Apr/2025 15:32:26] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-07 15:32:32,675 - werkzeug - INFO - 127.0.0.1 - - [07/Apr/2025 15:32:32] "GET /api/health HTTP/1.1" 200 -
+2025-04-07 15:32:32,678 - werkzeug - INFO - 127.0.0.1 - - [07/Apr/2025 15:32:32] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-07 15:32:32,681 - werkzeug - INFO - 127.0.0.1 - - [07/Apr/2025 15:32:32] "GET /api/tools HTTP/1.1" 200 -
+2025-04-07 15:32:32,683 - werkzeug - INFO - 127.0.0.1 - - [07/Apr/2025 15:32:32] "GET /api/environment HTTP/1.1" 200 -
+2025-04-07 15:32:32,685 - __main__ - INFO - Received message: Hello, performance test
+2025-04-07 15:32:32,688 - __main__ - ERROR - Error in chat endpoint: HTTPSConnectionPool(host='api.lastwinnersllc.com', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7e6862562900>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+2025-04-07 15:32:32,688 - werkzeug - INFO - 127.0.0.1 - - [07/Apr/2025 15:32:32] "[35m[1mPOST /api/chat HTTP/1.1[0m" 500 -
+2025-04-07 15:32:32,692 - werkzeug - INFO - 127.0.0.1 - - [07/Apr/2025 15:32:32] "GET /api/health HTTP/1.1" 200 -
+2025-04-07 15:32:32,694 - werkzeug - INFO - 127.0.0.1 - - [07/Apr/2025 15:32:32] "GET /api/health HTTP/1.1" 200 -
+2025-04-07 15:32:32,695 - werkzeug - INFO - 127.0.0.1 - - [07/Apr/2025 15:32:32] "GET /api/health HTTP/1.1" 200 -
+2025-04-07 15:32:32,695 - werkzeug - INFO - 127.0.0.1 - - [07/Apr/2025 15:32:32] "GET /api/health HTTP/1.1" 200 -
+2025-04-07 15:32:32,697 - werkzeug - INFO - 127.0.0.1 - - [07/Apr/2025 15:32:32] "GET /api/health HTTP/1.1" 200 -
+2025-04-07 15:32:32,697 - werkzeug - INFO - 127.0.0.1 - - [07/Apr/2025 15:32:32] "GET /api/health HTTP/1.1" 200 -
+2025-04-07 15:32:32,700 - werkzeug - INFO - 127.0.0.1 - - [07/Apr/2025 15:32:32] "GET /api/health HTTP/1.1" 200 -
+2025-04-07 15:32:32,700 - werkzeug - INFO - 127.0.0.1 - - [07/Apr/2025 15:32:32] "GET /api/health HTTP/1.1" 200 -
+2025-04-07 15:32:32,701 - werkzeug - INFO - 127.0.0.1 - - [07/Apr/2025 15:32:32] "GET /api/health HTTP/1.1" 200 -
+2025-04-07 15:32:32,702 - werkzeug - INFO - 127.0.0.1 - - [07/Apr/2025 15:32:32] "GET /api/health HTTP/1.1" 200 -
+2025-04-07 15:32:33,463 - werkzeug - INFO - 127.0.0.1 - - [07/Apr/2025 15:32:33] "GET / HTTP/1.1" 200 -
+2025-04-07 15:32:33,508 - werkzeug - INFO - 127.0.0.1 - - [07/Apr/2025 15:32:33] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-07 15:53:11,406 - __main__ - INFO - Starting AI Agent System on port 8080
+2025-04-07 15:53:11,407 - __main__ - INFO - Debug mode: True
+2025-04-07 15:53:11,414 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.20.0.2:8080
+2025-04-07 15:53:11,414 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-07 15:53:11,425 - werkzeug - INFO -  * Restarting with watchdog (inotify)
+2025-04-07 15:53:11,793 - __main__ - INFO - Starting AI Agent System on port 8080
+2025-04-07 15:53:11,793 - __main__ - INFO - Debug mode: True
+2025-04-07 15:53:11,797 - werkzeug - WARNING -  * Debugger is active!
+2025-04-07 15:53:11,798 - werkzeug - INFO -  * Debugger PIN: 661-011-098
+2025-04-07 15:53:30,643 - werkzeug - INFO - 172.20.0.1 - - [07/Apr/2025 15:53:30] "GET /api/health HTTP/1.1" 200 -
+2025-04-07 15:53:46,089 - werkzeug - INFO - 172.20.0.1 - - [07/Apr/2025 15:53:46] "GET /api/conversations HTTP/1.1" 200 -
+2025-04-07 15:54:00,399 - werkzeug - INFO - 172.20.0.1 - - [07/Apr/2025 15:54:00] "GET /api/tools HTTP/1.1" 200 -
