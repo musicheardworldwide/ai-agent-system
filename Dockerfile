@@ -59,5 +59,8 @@ EXPOSE 8080
 ENV PYTHONUNBUFFERED=1
 ENV FLASK_APP=run.py
 
+# Add DATABASE_URI environment variable explicitly
+ENV DATABASE_URI=sqlite:///data/ai_agent.db
+
 # Run the application
 CMD ["python", "run.py"]

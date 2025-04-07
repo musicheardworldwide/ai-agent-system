@@ -36,6 +36,7 @@ import BuildIcon from '@mui/icons-material/Build';
 import CodeIcon from '@mui/icons-material/Code';
 import VpnKeyIcon from '@mui/icons-material/VpnKey';
 import BugReportIcon from '@mui/icons-material/BugReport';
+import SendIcon from '@mui/icons-material/Send';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 

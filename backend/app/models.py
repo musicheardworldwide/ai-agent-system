@@ -16,7 +16,7 @@ class Conversation(Base):
     query = Column(Text, nullable=False)
     response = Column(Text, nullable=False)
     embedding = Column(JSON)  # Stores vector embeddings
-    metadata = Column(JSON)
+    additional_metadata = Column(JSON)  # Renamed from 'metadata' to avoid conflict
     created_at = Column(DateTime, default=datetime.utcnow)
     
     def to_dict(self):
@@ -24,7 +24,7 @@ class Conversation(Base):
             'id': self.id,
             'query': self.query,
             'response': self.response,
-            'metadata': self.metadata,
+            'metadata': self.additional_metadata,  # Updated key to match renamed attribute
             'created_at': self.created_at.isoformat()
         }
 

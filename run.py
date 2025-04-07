@@ -20,7 +20,7 @@ def create_app():
     # Configure app
     app.config.from_mapping(
         SECRET_KEY=os.environ.get('SECRET_KEY', 'dev'),
-        DATABASE_URI=os.environ.get('DATABASE_URI', 'sqlite:///ai_agent.db'),
+        SQLALCHEMY_DATABASE_URI=os.environ.get('DATABASE_URI', 'sqlite:///data/ai_agent.db'),  # Provide default value
         API_BASE_URL=os.environ.get('API_BASE_URL', 'https://api.lastwinnersllc.com'),
         API_KEY=os.environ.get('API_KEY', ''),
         LLM_MODEL=os.environ.get('LLM_MODEL', 'llama3.2'),

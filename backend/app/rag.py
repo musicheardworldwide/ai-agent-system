@@ -21,10 +21,10 @@ class RAGMemorySystem:
         self.api_key = Config.API_KEY
         self.embedding_model = Config.EMBEDDING_MODEL
         
-        # Initialize ChromaDB
+        # Initialize ChromaDB with the new configuration
         self.chroma = Client(Settings(
-            chroma_db_impl="duckdb+parquet",
-            persist_directory=Config.VECTOR_DB_PATH
+            persist_directory=Config.VECTOR_DB_PATH,
+            anonymized_telemetry=False  # Example of a new setting; adjust as needed
         ))
         
         # Create collections if they don't exist
