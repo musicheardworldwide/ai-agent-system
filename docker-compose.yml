@@ -2,17 +2,20 @@ version: '3'
 
 services:
   ai-agent-system:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
-      - "5000:5000"
+      - "8080:8080"
     volumes:
-      - .:/app
       - ./data:/app/data
+      - ./logs:/app/logs
     environment:
-      - PORT=5000
-      - DEBUG=False
+      - API_KEY=test_key
       - API_BASE_URL=https://api.lastwinnersllc.com
-      - LLM_MODEL=llama3.2
       - EMBEDDING_MODEL=nomic-embed-text
+      - CHAT_MODEL=llama3.2
+      - PORT=8080
+      - HOST=0.0.0.0
       - DATABASE_URI=sqlite:///data/ai_agent.db
     restart: unless-stopped

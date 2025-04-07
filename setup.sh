@@ -30,15 +30,21 @@ if [ ! -f .env ]; then
 # AI Agent System Environment Variables
 API_BASE_URL=https://api.lastwinnersllc.com
 API_KEY=
-LLM_MODEL=llama3.2
+CHAT_MODEL=llama3.2
 EMBEDDING_MODEL=nomic-embed-text
-DATABASE_URI=sqlite:///ai_agent.db
+DATABASE_URI=sqlite:///data/ai_agent.db
+PORT=8080
+HOST=0.0.0.0
 MASTER_KEY=change-this-in-production
 EOL
   print_success "Created .env file. Please edit it with your API key and other settings."
 else
   print_message ".env file already exists. Skipping creation."
 fi
+
+# Create necessary directories
+print_message "Creating necessary directories..."
+mkdir -p data logs
 
 # Check for Python 3.8+
 print_message "Checking Python version..."
@@ -87,8 +93,9 @@ else
   print_success "Found npm $npm_version"
 fi
 
-# Install Python dependencies
-print_message "Installing Python dependencies..."
+# Skip virtual environment creation entirely
+print_message "Installing Python dependencies directly (no virtual environment)..."
+pip3 install --upgrade pip
 pip3 install -r requirements.txt
 
 # Install frontend dependencies
@@ -109,4 +116,4 @@ cd ..
 
 print_success "Installation completed successfully!"
 print_message "To start the system, run: python3 run.py"
-print_message "The web interface will be available at: http://localhost:5000"
+print_message "The web interface will be available at: http://localhost:8080"

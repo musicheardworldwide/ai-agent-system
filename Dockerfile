@@ -14,6 +14,9 @@ RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - \
     && apt-get install -y nodejs \
     && rm -rf /var/lib/apt/lists/*
 
+# Create necessary directories
+RUN mkdir -p data logs
+
 # Copy requirements first for better caching
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
@@ -34,13 +37,23 @@ WORKDIR /app
 
 # Copy run script and other files
 COPY run.py .
-COPY .env.example .env
+COPY app.py .
+
+# Create .env file with default values
+RUN echo "API_BASE_URL=https://api.lastwinnersllc.com\n\
+API_KEY=test_key\n\
+CHAT_MODEL=llama3.2\n\
+EMBEDDING_MODEL=nomic-embed-text\n\
+DATABASE_URI=sqlite:///data/ai_agent.db\n\
+PORT=8080\n\
+HOST=0.0.0.0\n\
+MASTER_KEY=change-this-in-production" > .env
 
 # Initialize database
 RUN python run.py init-db
 
 # Expose port
-EXPOSE 5000
+EXPOSE 8080
 
 # Set environment variables
 ENV PYTHONUNBUFFERED=1

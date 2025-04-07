@@ -1,25 +1,21 @@
 # AI Agent System Requirements
-
 # Core Dependencies
 flask==2.2.3
 sqlalchemy==2.0.9
 python-dotenv==1.0.0
 requests==2.28.2
-chromadb==0.4.6
+chromadb==0.4.14
 networkx==3.1
 watchdog==3.0.0
 cryptography==40.0.2
-
-# Open Interpreter
-open-interpreter==0.1.9
-
 # API Integration
 pydantic==1.10.7
-
 # Development Tools
 pytest==7.3.1
 black==23.3.0
 flake8==6.0.0
-
 # Embedding and Vector Search
 sentence-transformers==2.2.2
+# Additional dependencies
+flask-cors==3.0.10
+gunicorn==20.1.0
